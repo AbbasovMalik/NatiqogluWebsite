@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Neuton", serif;
+  font-family: "Taviraj", serif;
+  button {
+    cursor: pointer;
+  }
+  ::selection {
+    background-color: #C5001A;
+    color: white;
+  }
+  body{
+    background-color: #222627;
+  }
+}
