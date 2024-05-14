@@ -11,7 +11,7 @@ root.render(
   <React.Fragment>
     <NewsProvider>
       <UserProvider>
-        {/* <Preloader /> */}
+        <Preloader />
         <App />
       </UserProvider>
     </NewsProvider>

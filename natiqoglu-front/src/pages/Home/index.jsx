@@ -11,9 +11,9 @@ function Home() {
       <Helmet>
         <title>Natiqoglu-Home</title>
       </Helmet>
-      <Header />
-      <Animationsection/>
-      <Trendingnews/>
+      {/* <Header /> */}
+      {/* <Animationsection/> */}
+      {/* <Trendingnews/> */}
       <Fetchsection/>
     </div>
   );

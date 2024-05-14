@@ -15,6 +15,7 @@ import UserUpdate from "./components/UserUpdate";
 import Detail from "./pages/Detail";
 import PrivateRoute from "./routes/PrivateRoute";
 import About from "./pages/About";
+import Categories from "./components/Categories";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/detail/:id" element={<Detail />} />
+              <Route path="/categories/:category" element={<Categories />} />
               <Route path="*" element={<Error />} />
             </Route>
           </Routes>

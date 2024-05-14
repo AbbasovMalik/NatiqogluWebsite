@@ -6,7 +6,6 @@ import "aos/dist/aos.css";
 import ScrollTrigger from "react-scroll-trigger";
 import AOS from "aos";
 import ContainerRight from "../ContainerRight";
-import { NewsContext } from "../../context/newsContext/NewsProvider";
 
 function Fetchsection() {
   const [news, setNews] = useState([]);
@@ -133,12 +132,54 @@ function Fetchsection() {
                     />
                   </div>
                 </div>
+                <div className="functions">
+                  <div
+                    className="sorted"
+                    value={selectVal}
+                    onChange={(e) => handleFilter(e)}
+                  >
+                    <Link to={`/categories/${news.category}`}>
+                      {/* <Link to={`/detail/${x._id}`}> */}
+
+                      <button onClick={() => handleCategoryClick("siyasət")}>
+                        Siyasət
+                      </button>
+                    </Link>
+                    <button onClick={() => handleCategoryClick("idman")}>
+                      Idman
+                    </button>
+                    <button onClick={() => handleCategoryClick("İqtisadiyyat")}>
+                      İqtisadiyyat
+                    </button>
+                    <button onClick={() => handleCategoryClick("Mədəniyyət")}>
+                      Mədəniyyət
+                    </button>
+                  </div>
+                  <div className="filter">
+                    <input
+                      type="text"
+                      placeholder="Axtarış . . ."
+                      onChange={(e) => setFilter(e.target.value)}
+                    />
+                  </div>
+                </div>
                 <div className="cards">
                   {filteredProducts
 
                     .filter((x) => x.name.includes(filter.toLowerCase()))
                     .map((x) => (
                       <div data-aos="fade-up" key={x._id} className="card">
+
+                        <Link to={`/categories/${x.category}`}>
+                          {/* <Link to={`/detail/${x._id}`}> */}
+
+                          <button
+                            onClick={() => handleCategoryClick("siyasət")}
+                          >
+                            Siyasət
+                          </button>
+                        </Link>
+
                         <div className="img">
                           <img src={x.image} alt="" />
                           <p className="time">{x.createdAt.slice(0, 10)}</p>
